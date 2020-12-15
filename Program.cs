@@ -5,8 +5,8 @@ using Amazon.Route53.Model;
 
 namespace route53
 {
-    class Program
-    {
+	class Program
+	{
 
 		private enum Op
 		{
@@ -28,8 +28,8 @@ namespace route53
 		private static string value;
 		private static bool quiet = false;
 
-        static void Main(string[] args)
-        {
+		static void Main(string[] args)
+		{
 			Console.WriteLine();
 			c = new AmazonRoute53Client();
 			if (parseArgs(args))
@@ -51,7 +51,7 @@ namespace route53
 			{
 				showUsage();
 			}
-        }
+		}
 
 		private static bool parseArgs(string[] args)
 		{
@@ -268,5 +268,5 @@ namespace route53
 			return ret;
 		}
 
-    }
+	}
 }
