@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.Core" Version="3.3.100.*"/>
+		<PackageReference Include="AWSSDK.Route53" Version="3.3.17.5"/>
+	</ItemGroup>
+</Project>
