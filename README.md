@@ -1,31 +1,31 @@
 # route53
-AWS Route53 DNS management helper
+AWS <code>Route53 DNS management helper
 
-usage: route53 -a -D -z -l -A -T -C -h -d -v -q
+usage: <code>route53 -a -D -z -l -A -T -C -h -d -v -q</code>
 
 Make sure you have your .aws/credentials setup first.
 
 Examples:
-<code>
+
 List all hosted zones (domains):
-	route53 -z
+	<code>route53 -z</code>
 
 List all entries for a domain:
-	route53 -d domain.com -l
+	<code>route53 -d domain.com -l</code>
 
 List all entries for a domain without details:
-	route53 -d domain.com -l -q
+	<code>route53 -d domain.com -l -q</code>
 
 Create an A record entry for a domain:
-	route53 -d domain.com -a -A -h <hostname> -v <ip>
+	<code>route53 -d domain.com -a -A -h <hostname> -v <ip></code>
 
 Create a CNAME record entry for a domain:
-	route53 -d domain.com -a -C -h <hostname> -v <cname value>
+	<code>route53 -d domain.com -a -C -h <hostname> -v <cname value></code>
 
 Delete a CNAME record entry for a domain:
-	route53 -d domain.com -D -h <hostname> -C -v <cname value>
+	<code>route53 -d domain.com -D -h <hostname> -C -v <cname value></code>
 
 Delete an A record record entry for a domain:
-	route53 -d domain.com -D -h <hostname> -A -v <ip>
+	<code>route53 -d domain.com -D -h <hostname> -A -v <ip></code>
 
 </code>
