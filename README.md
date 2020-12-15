@@ -6,7 +6,7 @@ usage: route53 -a -D -z -l -A -T -C -h -d -v -q
 Make sure you have your .aws/credentials setup first.
 
 Examples:
-
+<code>
 List all hosted zones (domains):
 	route53 -z
 
@@ -28,3 +28,4 @@ Delete a CNAME record entry for a domain:
 Delete an A record record entry for a domain:
 	route53 -d domain.com -D -h <hostname> -A -v <ip>
 
+</code>
