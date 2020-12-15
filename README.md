@@ -1,5 +1,5 @@
 # route53
-AWS <code>Route53 DNS management helper
+## AWS Route53 DNS management helper
 
 usage: <code>route53 -a -D -z -l -A -T -C -h -d -v -q</code>
 
