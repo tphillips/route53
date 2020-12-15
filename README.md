@@ -3,7 +3,7 @@ AWS <code>Route53 DNS management helper
 
 usage: <code>route53 -a -D -z -l -A -T -C -h -d -v -q</code>
 
-Make sure you have your .aws/credentials setup first.
+Make sure you have your <code>.aws/credentials</code> setup first.
 
 Examples:
 
