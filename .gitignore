@@ -1,0 +1,4 @@
+bin/*
+obj/*
+createEntries.sh
+deleteEntries.sh
