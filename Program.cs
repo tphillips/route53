@@ -27,6 +27,7 @@ namespace route53
 		private static string domain;
 		private static string value;
 		private static bool quiet = false;
+		private static int ttl=60;
 
 		static void Main(string[] args)
 		{
@@ -101,6 +102,10 @@ namespace route53
 				{
 					quiet = true;
 				}
+				if (args[x] == "-t") 
+				{
+					ttl = int.Parse(args[x+1]);
+				}
 			}
 			if (op == null)
 			{
@@ -149,7 +154,7 @@ namespace route53
 		public static void CreateHost()
 		{
 			Console.WriteLine($"Creating {host}.{domain} ({recordType} = {value})");
-			CreateDNSChangeAction(domain, host, value, recordType, ChangeAction.CREATE);
+			CreateDNSChangeAction(domain, host, value, recordType, ChangeAction.CREATE, ttl);
 		}
 
 		public static void ListZones()
@@ -212,10 +217,10 @@ namespace route53
 		public static void DeleteHostName()
 		{
 			Console.WriteLine($"Deleting {host}.{domain}");
-			CreateDNSChangeAction(domain, host, value, recordType, ChangeAction.DELETE);
+			CreateDNSChangeAction(domain, host, value, recordType, ChangeAction.DELETE, ttl);
 		}
 
-		private static void CreateDNSChangeAction(string domain, string hostName, string value, RRType type, ChangeAction action)
+		private static void CreateDNSChangeAction(string domain, string hostName, string value, RRType type, ChangeAction action, int ttl)
 		{
 			string zoneId = FindHostedZoneID(domain);
 			if (zoneId == null)
@@ -236,7 +241,7 @@ namespace route53
 				{
 					Name = $"{hostName}.{domain}",
 					Type = type,
-					TTL = 60,
+					TTL = ttl,
 					ResourceRecords = resourceRecord != null ? new List<ResourceRecord>() { resourceRecord } : null
 				},
 			};
