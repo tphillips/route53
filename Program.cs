@@ -141,13 +141,13 @@ namespace route53
 			Console.WriteLine("\r\n\tList all entries for a domain without details:");
 			Console.WriteLine("\t\troute53 -d domain.com -l -q");
 			Console.WriteLine("\r\n\tCreate an A record entry for a domain:");
-			Console.WriteLine("\t\troute53 -d domain.com -a -A -h <hostname> -v <ip>");
+			Console.WriteLine("\t\troute53 -d domain.com -a -A -h <hostname> -v <ip> -t <ttl (default 60)>");
 			Console.WriteLine("\r\n\tCreate a CNAME record entry for a domain:");
-			Console.WriteLine("\t\troute53 -d domain.com -a -C -h <hostname> -v <cname value>");
+			Console.WriteLine("\t\troute53 -d domain.com -a -C -h <hostname> -v <cname value> -t <ttl (default 60)>");
 			Console.WriteLine("\r\n\tDelete a CNAME record entry for a domain:");
-			Console.WriteLine("\t\troute53 -d domain.com -D -h <hostname> -C -v <cname value>");
+			Console.WriteLine("\t\troute53 -d domain.com -D -h <hostname> -C -v <cname value> -t <ttl (default 60)>");
 			Console.WriteLine("\r\n\tDelete an A record record entry for a domain:");
-			Console.WriteLine("\t\troute53 -d domain.com -D -h <hostname> -A -v <ip>");
+			Console.WriteLine("\t\troute53 -d domain.com -D -h <hostname> -A -v <ip> -t <ttl (default 60)>");
 			Console.WriteLine();
 		}
 
